@@ -1,0 +1,433 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* Navbar */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background-color: #000000;
+    padding: 10px 0;
+}
+
+.custom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-links {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 40px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s ease;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #f1f1f1;
+}
+
+.button-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.glass-btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFFFFF;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.glass-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Landing Section */
+.landing {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.landing-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.text-content .glass-btn {
+    display: inline-block;
+    margin-top: 30px;
+    width: auto;
+}
+
+/* Spline Viewer Container */
+.spline-container {
+    max-width: 50%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 90px;
+}
+
+/* Ensure Spline fills its container */
+spline-viewer {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+/* Hide 'Built with Spline' watermark */
+spline-viewer::part(brand) {
+    display: none !important;
+}
+
+/* About Section */
+#about {
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #bfbfbf, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card, .feature-box {
+    flex: 1;
+    padding: 30px;
+    background: linear-gradient(135deg, #000000, #333333);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    min-width: 280px;
+    max-width: 30%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card.popular {
+    background: linear-gradient(135deg, #000000, #333333);
+}
+
+.card:hover, .feature-box:hover {
+    transform: translateY(-10px);
+}
+
+.card h3, .feature-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card p, .feature-box ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.btn-card {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000;
+}
+
+/* Rainmaker and Finance Engine Sections */
+.rainmaker-section, .finance-engine-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.image-left, .image-right {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.image-left img, .image-right img {
+    width: 90%;
+    height: auto;
+    mask-image: linear-gradient(to right, black 40%, transparent);
+}
+
+/* Text Right and Left Fading */
+.text-right, .text-left {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Features Section */
+.features-section {
+    padding: 60px 20px;
+}
+
+.features-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #bfbfbf, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Feature Boxes Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Feature Box Flip Effect */
+.feature-box {
+    perspective: 1000px;
+    width: 100%;
+    height: 180px;
+    position: relative;
+}
+
+.feature-box-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.feature-box:hover .feature-box-inner {
+    transform: rotateY(180deg);
+}
+
+.feature-box-front, .feature-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #000000, #333333);
+}
+
+.feature-box-front h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.feature-box-back {
+    transform: rotateY(180deg);
+}
+
+.feature-box-back p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #000000;
+}
+
+.linkedin-icon, .instagram-icon {
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+
+/* Mobile and Small Screens */
+@media (max-width: 768px) {
+    /* Navbar */
+    .nav-links {
+        display: none; /* You might want to add a hamburger menu here */
+    }
+
+    /* Landing Section */
+    .landing-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-content, .spline-container {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .spline-container {
+        height: 400px;
+        margin-left: 0;
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column;
+    }
+
+    .card {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Rainmaker and Finance Engine */
+    .rainmaker-section, .finance-engine-section {
+        flex-direction: column;
+    }
+
+    .image-left, .image-right {
+        margin: 0;
+    }
+
+    .image-left img, .image-right img {
+        width: 100%;
+    }
+
+    /* Features Section */
+    .feature-grid {
+        grid-template-columns: 1fr; /* Mobile responsive feature grid */
+    }
+
+    .feature-box {
+        height: auto; /* Let feature boxes adjust their height automatically */
+    }
+
+    /* Adjust feature section padding */
+    .features-section {
+        padding: 40px 10px;
+    }
+
+    /* Adjust heading size for mobile */
+    .features-section h2 {
+        font-size: 2rem;
+    }
+
+    .button-container {
+        justify-content: center;
+    }
+}
+
+/* Tablet Screens */
+@media (max-width: 1024px) {
+    .landing-content {
+        flex-direction: column;
+    }
+
+    .text-content, .spline-container {
+        max-width: 100%;
+    }
+
+    .spline-container {
+        height: 450px;
+    }
+
+    /* Feature Section */
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row for tablets */
+    }
+}
+
+/* Add gap between Metis Alpha Features heading and feature cards */
+.feature-section h3 {
+    text-align: center;
+    margin-top: 20px; /* Add a small gap above */
+    margin-bottom: 30px; /* Add a small gap below */
+    font-size: 2rem;
+    background: linear-gradient(90deg, #bfbfbf, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
